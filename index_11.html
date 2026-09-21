@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIEN TCG — Din arena for samlekortspill</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+  :root {
+    --bg: #000000;
+    --panel: #141414;
+    --panel-border: #2e2e2e;
+    --gold: #b9a268; /* matched to the gold used in the LIEN TCG logo */
+    --text: #ffffff;
+    --text-dim: #b8b8b8;
+    --danger: #e05555;
+    --success: #4caf6e;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .nav-wrap {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px; gap: 16px;
+  }
+  .logo {
+    display: flex; align-items: center;
+    transition: opacity 0.2s;
+  }
+  .logo:hover { opacity: 0.85; }
+  .logo img {
+    height: 68px; width: auto; display: block;
+  }
+  nav ul { display: flex; gap: 32px; list-style: none; }
+  nav a { font-weight: 600; font-size: 0.95rem; color: var(--text-dim); transition: color 0.2s; }
+  nav a:hover { color: var(--gold); }
+  .header-right { display: flex; align-items: center; gap: 14px; }
+  .burger { display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; }
+  .burger span { width: 26px; height: 3px; background: var(--gold); border-radius: 2px; }
+
+  .cart-btn {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--panel); border: 1px solid var(--panel-border);
+    cursor: pointer; font-size: 1.2rem; color: var(--text);
+    transition: border-color 0.2s;
+  }
+  .cart-btn:hover { border-color: var(--gold); }
+  .cart-badge {
+    position: absolute; top: -6px; right: -6px;
+    background: var(--gold); color: #000; font-size: 0.7rem; font-weight: 800;
+    min-width: 18px; height: 18px; border-radius: 9px;
+    display: flex; align-items: center; justify-content: center; padding: 0 4px;
+  }
+  .cart-badge.hidden { display: none; }
+
+  /* Hero */
+  .hero {
+    max-width: 1200px; margin: 0 auto;
+    padding: 100px 24px 80px;
+    display: flex; align-items: center; justify-content: space-between; gap: 40px;
+  }
+  .hero-text { max-width: 560px; }
+  .hero-text h1 {
+    font-size: 3rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px;
+  }
+  .hero-text h1 span {
+    color: var(--gold);
+  }
+  .hero-text p { color: var(--text-dim); font-size: 1.1rem; margin-bottom: 32px; }
+  .btn-group { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 14px 28px; border-radius: 10px;
+    font-weight: 700; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s;
+    border: none; cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--gold); color: #000000;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,0.35); }
+  .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn-secondary {
+    border: 1px solid var(--panel-border); color: var(--text);
+    background: none;
+  }
+  .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  .hero-visual {
+    position: relative; width: 320px; height: 420px; flex-shrink: 0;
+  }
+  .card-stack { position: relative; width: 100%; height: 100%; z-index: 1; }
+  .tcg-card {
+    position: absolute; width: 220px; height: 310px; border-radius: 16px;
+    border: 2px solid var(--panel-border);
+    background: var(--panel);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem;
+    overflow: hidden;
+  }
+  .tcg-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tcg-card.c1 { top: 40px; left: 10px; transform: rotate(-12deg); z-index: 1; }
+  .tcg-card.c3 { top: 40px; left: 90px; transform: rotate(10deg); z-index: 2; }
+  .tcg-card.c2 {
+    top: 20px; left: 50px; transform: rotate(-2deg);
+    border-color: var(--gold);
+    z-index: 3; /* Charizard sits frontmost */
+  }
+
+  /* Soft gold spotlight behind the whole card stack */
+  .hero-glow {
+    position: absolute; z-index: -1;
+    width: 440px; height: 440px; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(185,162,104,0.35) 0%, rgba(185,162,104,0) 70%);
+    filter: blur(6px);
+    pointer-events: none;
+  }
+
+  /* Extra products faded into the background, hinting at a bigger catalog */
+  .bg-products { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+  .bg-product {
+    position: absolute; border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+    opacity: 0.3; filter: saturate(0.9);
+  }
+  .bg-product img { width: 100%; height: auto; display: block; border-radius: 12px; }
+  .bg-product.p1 { width: 130px; top: -36px; left: -54px; transform: rotate(-16deg); }
+  .bg-product.p2 { width: 125px; bottom: -34px; right: -46px; transform: rotate(14deg); }
+  .bg-product.p3 { width: 110px; top: 30px; right: -64px; transform: rotate(9deg); }
+  @media (max-width: 900px) {
+    .bg-products, .hero-glow, .sparkle { display: none; }
+  }
+
+  /* Small pulsing sparkle accents around the card stack */
+  .sparkle {
+    position: absolute; z-index: 2; color: var(--gold);
+    pointer-events: none;
+    animation: sparkle-pulse 2.6s ease-in-out infinite;
+  }
+  .sparkle.s1 { top: -14px; right: 26px; font-size: 1.3rem; animation-delay: 0s; }
+  .sparkle.s2 { bottom: 6px; left: -18px; font-size: 1rem; animation-delay: 1.2s; }
+  .sparkle.s3 { top: 46%; right: -22px; font-size: 0.85rem; animation-delay: 0.6s; }
+  @keyframes sparkle-pulse {
+    0%, 100% { opacity: 0.25; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+
+  section { padding: 90px 24px; max-width: 1200px; margin: 0 auto; }
+  .section-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .section-head .tag {
+    color: var(--gold); font-weight: 700; letter-spacing: 2px; font-size: 0.8rem; text-transform: uppercase;
+  }
+  .section-head h2 { font-size: 2.2rem; margin: 12px 0 16px; }
+  .section-head p { color: var(--text-dim); }
+
+  /* Shop grid */
+  .shop-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;
+  }
+  .product {
+    background: var(--panel); border: 1px solid var(--panel-border);
+    border-radius: 14px; text-align: center; overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .product.clickable { cursor: pointer; }
+  .product:hover { transform: translateY(-6px); border-color: var(--gold); }
+  .product .icon {
+    font-size: 3rem; margin-bottom: 18px;
+  }
+  .product-body { padding: 24px 24px 32px; }
+  .product h3 { font-size: 1.2rem; margin-bottom: 10px; }
+  .product p.desc { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 16px; }
+  .product .price { color: var(--gold); font-weight: 700; margin-top: 4px; }
+
+  /* About */
+  .about-grid { display: flex; gap: 48px; align-items: center; flex-wrap: wrap; }
+  .about-grid .stats { display: flex; gap: 32px; margin-top: 32px; flex-wrap: wrap; }
+  .stat h3 { font-size: 2rem; color: var(--gold); }
+  .stat p { color: var(--text-dim); font-size: 0.85rem; }
+  .about-visual {
+    flex: 1; min-width: 280px; height: 260px; border-radius: 18px;
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    display: flex; align-items: center; justify-content: center; font-size: 5rem;
+  }
+  .about-text { flex: 1; min-width: 280px; }
+
+  /* Reviews */
+  .review-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.3);
+    color: var(--gold); font-weight: 700; padding: 10px 20px; border-radius: 30px;
+    margin: 0 auto 16px; font-size: 0.95rem;
+  }
+  .stars { color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
+  .review-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 56px;
+  }
+  .review-card {
+    background: var(--panel); border: 1px solid var(--panel-border);
+    border-radius: 14px; padding: 24px;
+  }
+  .review-card .stars { margin-bottom: 10px; display: block; }
+  .review-card p { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 14px; }
+  .review-card .author { color: var(--text); font-weight: 700; font-size: 0.9rem; }
+  select {
+    background: #0a0a0a; border: 1px solid var(--panel-border); border-radius: 10px;
+    padding: 14px 16px; color: var(--text); font-size: 0.95rem;
+  }
+  select:focus { outline: none; border-color: var(--gold); }
+
+  /* Contact */
+  .contact-box {
+    background: var(--panel); border: 1px solid var(--panel-border);
+    border-radius: 18px; padding: 48px; display: flex; gap: 48px; flex-wrap: wrap;
+  }
+  .contact-info { flex: 1; min-width: 240px; }
+  .contact-info h3 { margin-bottom: 16px; }
+  .contact-info p { color: var(--text-dim); margin-bottom: 8px; }
+  form { flex: 2; min-width: 280px; display: flex; flex-direction: column; gap: 16px; }
+  input, textarea {
+    background: #0a0a0a; border: 1px solid var(--panel-border); border-radius: 10px;
+    padding: 14px 16px; color: var(--text); font-size: 0.95rem; width: 100%;
+    font-family: inherit;
+  }
+  input:focus, textarea:focus { outline: none; border-color: var(--gold); }
+  textarea { resize: vertical; min-height: 110px; }
+
+  footer {
+    border-top: 1px solid var(--panel-border);
+    padding: 32px 24px; text-align: center; color: var(--text-dim); font-size: 0.85rem;
+  }
+
+  /* Category listing view (replaces category grid, stays on the same page) */
+  .listing-view { display: none; }
+  .listing-view.open { display: block; }
+  .listing-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 32px; flex-wrap: wrap; gap: 16px;
+  }
+  .listing-header h3 { font-size: 1.6rem; }
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: none; border: 1px solid var(--panel-border); color: var(--text-dim);
+    padding: 10px 18px; border-radius: 10px; font-weight: 600; font-size: 0.9rem;
+    cursor: pointer; transition: border-color 0.2s, color 0.2s;
+  }
+  .back-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .listing-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;
+  }
+  .empty-listing {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--text-dim);
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: 14px;
+    padding: 48px 24px;
+  }
+  .listing-card {
+    background: var(--panel); border: 1px solid var(--panel-border);
+    border-radius: 14px; overflow: hidden; transition: transform 0.2s, border-color 0.2s;
+    display: flex; flex-direction: column;
+  }
+  .listing-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+  .listing-image {
+    position: relative;
+    height: 170px; display: flex; align-items: center; justify-content: center;
+    font-size: 3.4rem; background: var(--panel);
+    border-bottom: 1px solid var(--panel-border);
+    overflow: hidden;
+    padding: 16px;
+  }
+  .listing-image img {
+    position: static; width: auto; height: auto;
+    max-width: 100%; max-height: 100%;
+    object-fit: contain; /* shows the whole box, not cropped in */
+  }
+  /* Product photos are shot on a plain white backdrop — we can't remove that
+     from the photo itself, so this vignette softens just the outer corners
+     into the card's own dark background instead of a hard-edged white box. */
+  .listing-image::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, transparent 60%, var(--panel) 100%);
+    pointer-events: none;
+  }
+  .listing-image span { position: relative; z-index: 1; }
+  /* Items with a genuinely transparent product image (no white backdrop at
+     all) skip the vignette entirely — nothing to soften. */
+  .listing-image.transparent::after { content: none; }
+  .listing-card .listing-body { padding: 20px; text-align: center; flex: 1; display: flex; flex-direction: column; }
+  .listing-card h4 { font-size: 1rem; margin-bottom: 10px; font-weight: 600; }
+  .listing-card .listing-price { color: var(--gold); font-weight: 700; margin-bottom: 6px; }
+  .listing-card .listing-stock { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 14px; }
+  .listing-card .listing-stock.low { color: #e2b13c; }
+  .listing-card .listing-stock.out { color: #e2593c; font-weight: 600; }
+  .listing-card .listing-stock.preorder { color: var(--gold); font-weight: 600; }
+  .add-cart-btn {
+    margin-top: auto; background: none; border: 1px solid var(--gold); color: var(--gold);
+    padding: 10px 16px; border-radius: 8px; font-weight: 700; font-size: 0.85rem;
+    cursor: pointer; transition: background 0.2s, color 0.2s;
+  }
+  .add-cart-btn:hover { background: var(--gold); color: #000; }
+  .add-cart-btn.added { background: var(--success); border-color: var(--success); color: #fff; }
+  .add-cart-btn:disabled {
+    border-color: var(--panel-border); color: var(--text-dim);
+    cursor: not-allowed; background: none;
+  }
+
+  /* Cart drawer */
+  .cart-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+    z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.25s;
+  }
+  .cart-overlay.open { opacity: 1; pointer-events: auto; }
+  .cart-drawer {
+    position: fixed; top: 0; right: 0; bottom: 0; width: 380px; max-width: 92vw;
+    background: var(--panel); border-left: 1px solid var(--panel-border);
+    z-index: 201; transform: translateX(100%); transition: transform 0.3s ease;
+    display: flex; flex-direction: column;
+  }
+  .cart-drawer.open { transform: translateX(0); }
+  .cart-drawer-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 24px; border-bottom: 1px solid var(--panel-border);
+  }
+  .cart-drawer-header h3 { font-size: 1.2rem; }
+  .cart-close-btn {
+    background: none; border: none; color: var(--text-dim); font-size: 1.4rem; cursor: pointer;
+    line-height: 1; padding: 4px;
+  }
+  .cart-close-btn:hover { color: var(--gold); }
+  .cart-items { flex: 1; overflow-y: auto; padding: 16px 24px; display: flex; flex-direction: column; gap: 16px; }
+  .cart-empty { color: var(--text-dim); text-align: center; padding: 40px 0; font-size: 0.95rem; }
+  .cart-item { display: flex; gap: 12px; align-items: flex-start; }
+  .cart-item-icon {
+    width: 48px; height: 48px; border-radius: 8px; background: var(--bg);
+    border: 1px solid var(--panel-border); display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; flex-shrink: 0;
+  }
+  .cart-item-info { flex: 1; min-width: 0; }
+  .cart-item-info h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+  .cart-item-price { color: var(--gold); font-size: 0.85rem; font-weight: 700; margin-bottom: 8px; }
+  .qty-controls { display: flex; align-items: center; gap: 10px; }
+  .qty-controls button {
+    width: 24px; height: 24px; border-radius: 6px; border: 1px solid var(--panel-border);
+    background: #0a0a0a; color: var(--text); cursor: pointer; font-weight: 700; font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .qty-controls button:hover { border-color: var(--gold); color: var(--gold); }
+  .qty-controls span { font-size: 0.9rem; min-width: 18px; text-align: center; }
+  .cart-item-remove {
+    background: none; border: none; color: var(--text-dim); cursor: pointer; font-size: 0.8rem;
+    text-decoration: underline; padding: 0;
+  }
+  .cart-item-remove:hover { color: var(--danger); }
+  .cart-drawer-footer { padding: 20px 24px; border-top: 1px solid var(--panel-border); }
+  .cart-subtotal { display: flex; justify-content: space-between; font-weight: 700; margin-bottom: 16px; font-size: 1.05rem; }
+  .cart-subtotal span:last-child { color: var(--gold); }
+
+  /* Checkout modal */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+    z-index: 300; display: none; align-items: center; justify-content: center; padding: 24px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal-box {
+    background: var(--panel); border: 1px solid var(--panel-border); border-radius: 18px;
+    padding: 36px; max-width: 560px; width: 100%; max-height: 90vh; overflow-y: auto;
+  }
+  .modal-box h3 { font-size: 1.4rem; margin-bottom: 6px; }
+  .modal-box .modal-sub { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 24px; }
+  .checkout-summary {
+    background: #0a0a0a; border: 1px solid var(--panel-border); border-radius: 10px;
+    padding: 16px; margin-bottom: 20px; font-size: 0.88rem;
+  }
+  .checkout-summary-row { display: flex; justify-content: space-between; padding: 4px 0; color: var(--text-dim); }
+  .checkout-summary-total { display: flex; justify-content: space-between; padding-top: 10px; margin-top: 10px; border-top: 1px solid var(--panel-border); font-weight: 700; }
+  .checkout-summary-total span:last-child { color: var(--gold); }
+  .checkout-note {
+    font-size: 0.8rem; color: var(--text-dim); margin-top: 10px; line-height: 1.5;
+  }
+  .checkout-status {
+    margin-top: 16px; padding: 14px 16px; border-radius: 10px; font-size: 0.88rem; display: none;
+  }
+  .checkout-status.show { display: block; }
+  .checkout-status.info { background: rgba(212,175,55,0.12); border: 1px solid rgba(212,175,55,0.3); color: var(--gold); }
+  .checkout-status.error { background: rgba(224,85,85,0.12); border: 1px solid rgba(224,85,85,0.3); color: var(--danger); }
+  .modal-actions { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
+  .modal-actions .btn { flex: 1; text-align: center; }
+  .vipps-btn { background: #ff5b24; color: #fff; }
+  .vipps-btn:hover { box-shadow: 0 8px 24px rgba(255,91,36,0.35); }
+
+  @media (max-width: 900px) {
+    .hero { flex-direction: column; text-align: center; padding-top: 60px; }
+    .hero-text { max-width: 100%; }
+    .btn-group { justify-content: center; }
+    .shop-grid { grid-template-columns: 1fr; }
+    .review-grid { grid-template-columns: 1fr; }
+    nav ul { display: none; }
+    .burger { display: flex; }
+    nav ul.open {
+      display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0;
+      background: var(--bg); padding: 24px; gap: 20px; border-bottom: 1px solid var(--panel-border);
+    }
+  }
+  @media (max-width: 560px) {
+    .hero-text h1 { font-size: 2.2rem; }
+    .contact-box { padding: 28px; }
+    .cart-drawer { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="#hjem" class="logo"><img src="data:image/png;base64,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" alt="LIEN TCG"></a>
+    <nav>
+      <ul id="navList">
+        <li><a href="#hjem">Hjem</a></li>
+        <li><a href="#butikk">Butikk</a></li>
+        <!-- <li><a href="#om-oss">Om oss</a></li> midlertidig fjernet -->
+        <li><a href="#anmeldelser">Anmeldelser</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <button class="cart-btn" id="cartBtn" aria-label="Handlekurv" onclick="openCart()">
+        🛒<span class="cart-badge hidden" id="cartBadge">0</span>
+      </button>
+      <button class="burger" id="burgerBtn" aria-label="Meny">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="hjem">
+  <div class="hero-text">
+    <h1>Velkommen til <span>LIEN TCG</span></h1>
+    <p>Din lokale arena for samlekortspill. Vi selger singelkort, boosterbokser og Elite Trainer bokser med et bredt utvalg og ekspertråd for alle nivåer — fra nybegynner til samler.</p>
+    <div class="btn-group">
+      <a href="#butikk" class="btn btn-primary">Utforsk butikken</a>
+      <a href="#kontakt" class="btn btn-secondary">Kontakt oss</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="bg-products" aria-hidden="true">
+      <div class="bg-product p1"><img src="https://product-images.tcgplayer.com/704143.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="bg-product p2"><img src="https://product-images.tcgplayer.com/644279.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+      <div class="bg-product p3"><img src="https://product-images.tcgplayer.com/624676.jpg" alt="" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card-stack">
+      <div class="tcg-card c1"><img src="https://images.pokemontcg.io/base1/2_hires.png" alt="Blastoise (Base Set, 1999)" loading="lazy" onerror="this.parentElement.textContent='🃏'"></div>
+      <div class="tcg-card c2"><img src="https://images.pokemontcg.io/base1/4_hires.png" alt="Charizard (Base Set, 1999)" loading="lazy" onerror="this.parentElement.textContent='🔥'"></div>
+      <div class="tcg-card c3"><img src="https://images.pokemontcg.io/base1/15_hires.png" alt="Venusaur (Base Set, 1999)" loading="lazy" onerror="this.parentElement.textContent='🌿'"></div>
+    </div>
+    <span class="sparkle s1" aria-hidden="true">✨</span>
+    <span class="sparkle s2" aria-hidden="true">✨</span>
+    <span class="sparkle s3" aria-hidden="true">✨</span>
+  </div>
+</section>
+
+<section id="butikk">
+  <div class="section-head">
+    <span class="tag">Butikk</span>
+    <h2>Våre kategorier</h2>
+    <p>Vi holder et bredt lager innenfor syv hovedkategorier — trykk på en kategori for å se utvalget.</p>
+  </div>
+  <div class="shop-grid" id="shopGrid">
+    <div class="product clickable" onclick="showListing('singelkort')">
+      <div class="listing-image"><img src="https://images.pexels.com/photos/37743087/pexels-photo-37743087.png?auto=compress&cs=tinysrgb&w=1200" alt="Singelkort" loading="lazy" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','&lt;span&gt;🌟&lt;/span&gt;')"></div>
+      <div class="product-body">
+        <h3>Singelkort</h3>
+        <p class="desc">Et stort utvalg av enkeltkort, fra vanlige kort til sjeldne foil-varianter.</p>
+        <div class="price">Kommer snart</div>
+      </div>
+    </div>
+    <div class="product clickable" onclick="showListing('booster')">
+      <div class="listing-image"><img src="https://product-images.tcgplayer.com/565606.jpg" alt="Boosterbokser" loading="lazy" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','&lt;span&gt;📦&lt;/span&gt;')"></div>
+      <div class="product-body">
+        <h3>Boosterbokser</h3>
+        <p class="desc">Uåpnede boosterbokser fra de nyeste og mest populære settene.</p>
+        <div class="price">Fra 899 kr</div>
+      </div>
+    </div>
+    <div class="product clickable" onclick="showListing('etb')">
+      <div class="listing-image"><img src="https://product-images.tcgplayer.com/557350.jpg" alt="Elite Trainer Bokser" loading="lazy" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','&lt;span&gt;🎁&lt;/span&gt;')"></div>
+      <div class="product-body">
+        <h3>Elite Trainer Bokser</h3>
+        <p class="desc">Komplette Elite Trainer bokser med boosterpakker og premium tilbehør.</p>
+        <div class="price">Fra 1100 kr</div>
+      </div>
+    </div>
+    <div class="product clickable" onclick="showListing('graded')">
+      <div class="listing-image"><img src="https://i.ebayimg.com/images/g/B3IAAOSwVWhkKLSI/s-l1600.jpg" alt="Graderte kort" loading="lazy" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','&lt;span&gt;🏅&lt;/span&gt;')"></div>
+      <div class="product-body">
+        <h3>Graderte kort</h3>
+        <p class="desc">Profesjonelt graderte kort med attestert tilstand og verdi.</p>
+        <div class="price">Kommer snart</div>
+      </div>
+    </div>
+    <div class="product clickable" onclick="showListing('mystery')">
+      <div class="listing-image transparent"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20220%22%3E%20%3Cdefs%3E%20%3Cfilter%20id%3D%22grain2%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.85%22%20numOctaves%3D%222%22%20seed%3D%224%22%20result%3D%22noise%22/%3E%20%3CfeColorMatrix%20in%3D%22noise%22%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.06%200%22/%3E%20%3CfeComposite%20operator%3D%22over%22%20in2%3D%22SourceGraphic%22/%3E%20%3C/filter%3E%20%3CradialGradient%20id%3D%22bodyShade2%22%20cx%3D%2236%25%22%20cy%3D%2230%25%22%20r%3D%2280%25%22%3E%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%232c2721%22/%3E%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23161310%22/%3E%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23040404%22/%3E%20%3C/radialGradient%3E%20%3ClinearGradient%20id%3D%22ropeShade2%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%220%22%3E%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%237a6838%22/%3E%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23d9c081%22/%3E%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237a6838%22/%3E%20%3C/linearGradient%3E%20%3CradialGradient%20id%3D%22shadowGrad2%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%3E%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23000%22%20stop-opacity%3D%220.55%22/%3E%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23000%22%20stop-opacity%3D%220%22/%3E%20%3C/radialGradient%3E%20%3C/defs%3E%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22207%22%20rx%3D%2270%22%20ry%3D%2211%22%20fill%3D%22url%28%23shadowGrad2%29%22/%3E%20%3Cpath%20d%3D%22M74%2058%20C%2048%2064%2C%2024%2084%2C%2022%20118%20L%2020%20158%20C%2020%20192%2C%2056%20210%2C%20100%20210%20C%20144%20210%2C%20180%20192%2C%20180%20158%20L%20178%20118%20C%20176%2084%2C%20152%2064%2C%20126%2058%20Q%20100%2070%2074%2058%20Z%22%20fill%3D%22url%28%23bodyShade2%29%22%20filter%3D%22url%28%23grain2%29%22/%3E%20%3Cpath%20d%3D%22M74%2058%20C%2048%2064%2C%2024%2084%2C%2022%20118%20L%2020%20158%20C%2020%20192%2C%2056%20210%2C%20100%20210%20C%20144%20210%2C%20180%20192%2C%20180%20158%20L%20178%20118%20C%20176%2084%2C%20152%2064%2C%20126%2058%20Q%20100%2070%2074%2058%20Z%22%20fill%3D%22none%22%20stroke%3D%22%238c7a4a%22%20stroke-width%3D%222%22%20opacity%3D%220.75%22/%3E%20%3Cpath%20d%3D%22M42%2092%20C%2050%20116%2C%2044%20152%2C%2062%20190%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%224%22%20opacity%3D%220.4%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M39%2090%20C%2047%20114%2C%2041%20150%2C%2059%20188%22%20fill%3D%22none%22%20stroke%3D%22%234a4230%22%20stroke-width%3D%221.6%22%20opacity%3D%220.5%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M158%2094%20C%20151%20118%2C%20158%20152%2C%20140%20192%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%224%22%20opacity%3D%220.4%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M161%2092%20C%20154%20116%2C%20161%20150%2C%20143%20190%22%20fill%3D%22none%22%20stroke%3D%22%235c5236%22%20stroke-width%3D%221.6%22%20opacity%3D%220.4%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M88%2076%20C%2092%20118%2C%2086%20162%2C%2094%20200%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20opacity%3D%220.28%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M114%2076%20C%20110%20118%2C%20116%20162%2C%20108%20200%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20opacity%3D%220.28%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M52%2088%20C%2046%20118%2C%2048%20150%2C%2062%20182%22%20fill%3D%22none%22%20stroke%3D%22%23c9b26a%22%20stroke-width%3D%222%22%20opacity%3D%220.15%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M74%2058%20Q%2084%2047%2092%2057%20Q%2096%2046%20100%2057%20Q%20104%2046%20108%2057%20Q%20116%2047%20126%2058%22%20fill%3D%22none%22%20stroke%3D%22%23221d16%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%20%3Cpath%20d%3D%22M74%2058%20Q%2084%2047%2092%2057%20Q%2096%2046%20100%2057%20Q%20104%2046%20108%2057%20Q%20116%2047%20126%2058%22%20fill%3D%22none%22%20stroke%3D%22%238c7a4a%22%20stroke-width%3D%221.3%22%20opacity%3D%220.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%20%3Cpath%20d%3D%22M68%2062%20Q100%2052%20132%2062%22%20fill%3D%22none%22%20stroke%3D%22url%28%23ropeShade2%29%22%20stroke-width%3D%225.5%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M70%2056%20Q100%2047%20130%2056%22%20fill%3D%22none%22%20stroke%3D%22url%28%23ropeShade2%29%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%20%3Cellipse%20cx%3D%22100%22%20cy%3D%2252%22%20rx%3D%227%22%20ry%3D%225.5%22%20fill%3D%22url%28%23ropeShade2%29%22%20stroke%3D%22%235c4e28%22%20stroke-width%3D%221%22/%3E%20%3Cpath%20d%3D%22M94%2055%20C%2090%2066%2C%2092%2074%2C%2088%2080%22%20fill%3D%22none%22%20stroke%3D%22url%28%23ropeShade2%29%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M106%2055%20C%20110%2066%2C%20108%2074%2C%20112%2080%22%20fill%3D%22none%22%20stroke%3D%22url%28%23ropeShade2%29%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22/%3E%20%3Ctext%20x%3D%22101%22%20y%3D%22154%22%20font-family%3D%22Georgia%2C%20%27Times%20New%20Roman%27%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23050504%22%20text-anchor%3D%22middle%22%20opacity%3D%220.75%22%3E%3F%3C/text%3E%20%3Ctext%20x%3D%22100%22%20y%3D%22153%22%20font-family%3D%22Georgia%2C%20%27Times%20New%20Roman%27%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23c9a84f%22%20text-anchor%3D%22middle%22%3E%3F%3C/text%3E%20%3Cg%20transform%3D%22translate%28100%2C183%29%22%3E%20%3Ccircle%20r%3D%2219%22%20fill%3D%22%23100e0b%22%20stroke%3D%22%238c7a4a%22%20stroke-width%3D%221.3%22%20stroke-dasharray%3D%222.3%202.1%22%20opacity%3D%220.9%22/%3E%20%3Cg%20transform%3D%22scale%280.68%29%22%3E%20%3Cpath%20d%3D%22M%20-17%200%20A%2017%2017%200%200%201%2017%200%20Z%22%20fill%3D%22%238a2e28%22/%3E%20%3Cpath%20d%3D%22M%20-17%200%20A%2017%2017%200%200%200%2017%200%20Z%22%20fill%3D%22%23d8d2c2%22/%3E%20%3Crect%20x%3D%22-17%22%20y%3D%22-2%22%20width%3D%2234%22%20height%3D%224%22%20fill%3D%22%23111%22/%3E%20%3Ccircle%20r%3D%225.4%22%20fill%3D%22%23d8d2c2%22%20stroke%3D%22%23111%22%20stroke-width%3D%222%22/%3E%20%3Ccircle%20r%3D%222.2%22%20fill%3D%22%23100e0b%22/%3E%20%3C/g%3E%20%3C/g%3E%20%3C/svg%3E" alt="Mystery Packs" loading="lazy" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','&lt;span&gt;🎲&lt;/span&gt;')"></div>
+      <div class="product-body">
+        <h3>Mystery Packs</h3>
+        <p class="desc">Overraskelsespakker med en spennende miks av kort — perfekt for samlere.</p>
+        <div class="price">Kommer snart</div>
+      </div>
+    </div>
+    <div class="product clickable" onclick="showListing('onepiece')">
+      <div class="listing-image"><img src="https://card-binder.com/cdn/shop/files/One-Piece-OP17-The-Worlds-Strongest-Warriors-Japanese-Booster-Box.webp?v=1784631445" alt="One Piece" loading="lazy" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','&lt;span&gt;🏴‍☠️&lt;/span&gt;')"></div>
+      <div class="product-body">
+        <h3>One Piece</h3>
+        <p class="desc">Japanske boosterbokser fra One Piece Card Game — populære sett til samlere.</p>
+        <div class="price">Fra 1100 kr</div>
+      </div>
+    </div>
+    <div class="product clickable" onclick="showListing('collection')">
+      <div class="listing-image"><img src="https://product-images.tcgplayer.com/654213.jpg" alt="Collection Bokser" loading="lazy" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','&lt;span&gt;📚&lt;/span&gt;')"></div>
+      <div class="product-body">
+        <h3>Collection Bokser</h3>
+        <p class="desc">Temabaserte collection bokser med kort, tilbehør og eksklusive samlerartikler.</p>
+        <div class="price">Fra 499 kr</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="listing-view" id="listingView">
+    <div class="listing-header">
+      <h3 id="listingTitle"></h3>
+      <button class="back-btn" onclick="hideListing()">← Tilbake til kategorier</button>
+    </div>
+    <div class="listing-grid" id="listingGrid"></div>
+  </div>
+</section>
+
+<!-- "Om oss"-seksjonen er midlertidig fjernet på forespørsel. Fjern kommentartaggene
+     under (og gjør det samme med nav-lenken over) for å legge den tilbake.
+<section id="om-oss">
+  <div class="about-grid">
+    <div class="about-text">
+      <span class="tag">Om oss</span>
+      <h2 style="font-size:2.2rem; margin:12px 0 16px;">Bygget av spillere, for spillere</h2>
+      <p style="color:var(--text-dim);">LIEN TCG startet som en lidenskap for samlekortspill og har vokst til et samlingspunkt for lokale spillere. Vi tilbyr et bredt sortiment, ekspertråd og et varmt community der alle er velkomne — uansett om du samler, bytter eller bygger deck.</p>
+      <div class="stats">
+        <div class="stat"><h3>5000+</h3><p>Kort på lager</p></div>
+        <div class="stat"><h3>100+</h3><p>Fornøyde kunder</p></div>
+        <div class="stat"><h3>50+</h3><p>Sett på lager</p></div>
+      </div>
+    </div>
+    <div class="about-visual">🏆</div>
+  </div>
+</section>
+-->
+
+<section id="anmeldelser">
+  <div class="section-head">
+    <div class="review-badge">⭐ 100+ fornøyde kunder</div>
+    <h2>Hva kundene sier</h2>
+    <p>Vi er stolte av tilliten vi har bygget med samlere og spillere i nærmiljøet.</p>
+  </div>
+  <div class="review-grid">
+    <div class="review-card">
+      <span class="stars">★★★★★</span>
+      <p>«Kjempegod service og et flott utvalg av singelkort. Kommer definitivt tilbake!»</p>
+      <div class="author">— Markus</div>
+    </div>
+    <div class="review-card">
+      <span class="stars">★★★★★</span>
+      <p>«Fant akkurat den Elite Trainer boksen jeg lette etter. Rask og hyggelig betjening.»</p>
+      <div class="author">— Ingrid</div>
+    </div>
+    <div class="review-card">
+      <span class="stars">★★★★★</span>
+      <p>«Ekte kort, gode priser og et miljø som virkelig bryr seg om hobbyen. Anbefales!»</p>
+      <div class="author">— Sander</div>
+    </div>
+  </div>
+  <!-- Anmeldelse-skjemaet er midlertidig fjernet (kan legges til igjen senere). -->
+</section>
+
+<section id="kontakt">
+  <div class="section-head">
+    <span class="tag">Kontakt</span>
+    <h2>Ta kontakt med oss</h2>
+  </div>
+  <div class="contact-box">
+    <div class="contact-info">
+      <h3>LIEN TCG</h3>
+      <p>Fyll ut skjemaet, så tar vi kontakt med deg.</p>
+      <p>Org.nr: 937 542 968</p>
+      <p>Heidalsvegen 1574, 2676 Heidal</p>
+      <p>Tlf: 475 07 822</p>
+      <p>E-post: <a href="mailto:post@lientcg.no" style="text-decoration:underline;">post@lientcg.no</a></p>
+    </div>
+    <form onsubmit="event.preventDefault(); alert('Takk for din melding! Vi tar kontakt så snart som mulig.'); this.reset();">
+      <input type="text" placeholder="Navn" required>
+      <input type="email" placeholder="E-post" required>
+      <textarea placeholder="Din melding" required></textarea>
+      <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send melding</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2026 LIEN TCG · Org.nr 937 542 968 · Alle rettigheter reservert.<br>
+  <a href="salgsvilkaar.html" style="text-decoration:underline;">Salgsvilkår</a>
+</footer>
+
+<!-- Cart drawer -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Handlekurv">
+  <div class="cart-drawer-header">
+    <h3>Handlekurv</h3>
+    <button class="cart-close-btn" onclick="closeCart()" aria-label="Lukk">×</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-drawer-footer">
+    <div class="cart-subtotal"><span>Sum</span><span id="cartSubtotal">0 kr</span></div>
+    <button class="btn btn-primary" style="width:100%;" id="checkoutBtn" onclick="openCheckout()" disabled>Gå til kassen</button>
+  </div>
+</aside>
+
+<!-- Checkout modal -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="modal-box">
+    <h3>Fullfør bestilling</h3>
+    <p class="modal-sub">Fyll inn kontaktinfo, så betaler du trygt med Vipps.</p>
+
+    <div class="checkout-summary" id="checkoutSummary"></div>
+
+    <form id="checkoutForm">
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div style="display:flex; gap:14px;">
+          <input type="text" id="ckFornavn" placeholder="Fornavn" required style="flex:1;">
+          <input type="text" id="ckEtternavn" placeholder="Etternavn" required style="flex:1;">
+        </div>
+        <input type="text" id="ckAdresse" placeholder="Adresse (gate og husnummer)" required>
+        <div style="display:flex; gap:14px;">
+          <input type="text" id="ckPostnummer" placeholder="Postnummer" required pattern="[0-9]{4}" style="flex:1;">
+          <input type="text" id="ckPoststed" placeholder="Poststed" required style="flex:2;">
+        </div>
+        <input type="email" id="ckEpost" placeholder="E-post" required>
+        <input type="tel" id="ckTelefon" placeholder="Telefon (kreves for Vipps, f.eks. 41234567)" required pattern="[0-9 +]{8,15}">
+        <textarea id="ckMerknad" placeholder="Merknad til bestillingen (valgfritt)"></textarea>
+      </div>
+
+      <p class="checkout-note">Ved å trykke «Betal med Vipps» sendes du videre til Vipps for å fullføre betalingen trygt. Ingen kortinformasjon lagres på denne siden.</p>
+
+      <div class="checkout-status" id="checkoutStatus"></div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" onclick="closeCheckout()">Tilbake til kurv</button>
+        <button type="submit" class="btn vipps-btn" id="vippsBtn">Betal med Vipps</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  /* ---------- Mobile nav ---------- */
+  const burger = document.getElementById('burgerBtn');
+  const navList = document.getElementById('navList');
+  burger.addEventListener('click', () => navList.classList.toggle('open'));
+  navList.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => navList.classList.remove('open'))
+  );
+
+  /* ---------- Catalog data ----------
+     Placeholder inventory — swap in real names and prices (in NOK, whole kr)
+     when ready. Images below are official/stock images found for these
+     placeholder items (see README.md "Om produktbildene" for sourcing notes
+     and swap-out instructions) — replace with your own photos once you have
+     them. */
+  // Custom black drawstring bag icon (SVG) used for all Mystery Pack images —
+  // Pokemon-themed with a gold "?" and a Pokeball emblem, transparent background.
+  const MYSTERY_BAG_IMG = "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20200%20220%22%3E%20%3Cdefs%3E%20%3Cfilter%20id%3D%22grain2%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%20%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.85%22%20numOctaves%3D%222%22%20seed%3D%224%22%20result%3D%22noise%22/%3E%20%3CfeColorMatrix%20in%3D%22noise%22%20type%3D%22matrix%22%20values%3D%220%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200%200.06%200%22/%3E%20%3CfeComposite%20operator%3D%22over%22%20in2%3D%22SourceGraphic%22/%3E%20%3C/filter%3E%20%3CradialGradient%20id%3D%22bodyShade2%22%20cx%3D%2236%25%22%20cy%3D%2230%25%22%20r%3D%2280%25%22%3E%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%232c2721%22/%3E%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23161310%22/%3E%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23040404%22/%3E%20%3C/radialGradient%3E%20%3ClinearGradient%20id%3D%22ropeShade2%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%220%22%3E%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%237a6838%22/%3E%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23d9c081%22/%3E%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237a6838%22/%3E%20%3C/linearGradient%3E%20%3CradialGradient%20id%3D%22shadowGrad2%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%3E%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23000%22%20stop-opacity%3D%220.55%22/%3E%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23000%22%20stop-opacity%3D%220%22/%3E%20%3C/radialGradient%3E%20%3C/defs%3E%20%3Cellipse%20cx%3D%22100%22%20cy%3D%22207%22%20rx%3D%2270%22%20ry%3D%2211%22%20fill%3D%22url%28%23shadowGrad2%29%22/%3E%20%3Cpath%20d%3D%22M74%2058%20C%2048%2064%2C%2024%2084%2C%2022%20118%20L%2020%20158%20C%2020%20192%2C%2056%20210%2C%20100%20210%20C%20144%20210%2C%20180%20192%2C%20180%20158%20L%20178%20118%20C%20176%2084%2C%20152%2064%2C%20126%2058%20Q%20100%2070%2074%2058%20Z%22%20fill%3D%22url%28%23bodyShade2%29%22%20filter%3D%22url%28%23grain2%29%22/%3E%20%3Cpath%20d%3D%22M74%2058%20C%2048%2064%2C%2024%2084%2C%2022%20118%20L%2020%20158%20C%2020%20192%2C%2056%20210%2C%20100%20210%20C%20144%20210%2C%20180%20192%2C%20180%20158%20L%20178%20118%20C%20176%2084%2C%20152%2064%2C%20126%2058%20Q%20100%2070%2074%2058%20Z%22%20fill%3D%22none%22%20stroke%3D%22%238c7a4a%22%20stroke-width%3D%222%22%20opacity%3D%220.75%22/%3E%20%3Cpath%20d%3D%22M42%2092%20C%2050%20116%2C%2044%20152%2C%2062%20190%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%224%22%20opacity%3D%220.4%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M39%2090%20C%2047%20114%2C%2041%20150%2C%2059%20188%22%20fill%3D%22none%22%20stroke%3D%22%234a4230%22%20stroke-width%3D%221.6%22%20opacity%3D%220.5%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M158%2094%20C%20151%20118%2C%20158%20152%2C%20140%20192%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%224%22%20opacity%3D%220.4%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M161%2092%20C%20154%20116%2C%20161%20150%2C%20143%20190%22%20fill%3D%22none%22%20stroke%3D%22%235c5236%22%20stroke-width%3D%221.6%22%20opacity%3D%220.4%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M88%2076%20C%2092%20118%2C%2086%20162%2C%2094%20200%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20opacity%3D%220.28%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M114%2076%20C%20110%20118%2C%20116%20162%2C%20108%20200%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222.2%22%20opacity%3D%220.28%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M52%2088%20C%2046%20118%2C%2048%20150%2C%2062%20182%22%20fill%3D%22none%22%20stroke%3D%22%23c9b26a%22%20stroke-width%3D%222%22%20opacity%3D%220.15%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M74%2058%20Q%2084%2047%2092%2057%20Q%2096%2046%20100%2057%20Q%20104%2046%20108%2057%20Q%20116%2047%20126%2058%22%20fill%3D%22none%22%20stroke%3D%22%23221d16%22%20stroke-width%3D%228%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%20%3Cpath%20d%3D%22M74%2058%20Q%2084%2047%2092%2057%20Q%2096%2046%20100%2057%20Q%20104%2046%20108%2057%20Q%20116%2047%20126%2058%22%20fill%3D%22none%22%20stroke%3D%22%238c7a4a%22%20stroke-width%3D%221.3%22%20opacity%3D%220.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%20%3Cpath%20d%3D%22M68%2062%20Q100%2052%20132%2062%22%20fill%3D%22none%22%20stroke%3D%22url%28%23ropeShade2%29%22%20stroke-width%3D%225.5%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M70%2056%20Q100%2047%20130%2056%22%20fill%3D%22none%22%20stroke%3D%22url%28%23ropeShade2%29%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22/%3E%20%3Cellipse%20cx%3D%22100%22%20cy%3D%2252%22%20rx%3D%227%22%20ry%3D%225.5%22%20fill%3D%22url%28%23ropeShade2%29%22%20stroke%3D%22%235c4e28%22%20stroke-width%3D%221%22/%3E%20%3Cpath%20d%3D%22M94%2055%20C%2090%2066%2C%2092%2074%2C%2088%2080%22%20fill%3D%22none%22%20stroke%3D%22url%28%23ropeShade2%29%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22/%3E%20%3Cpath%20d%3D%22M106%2055%20C%20110%2066%2C%20108%2074%2C%20112%2080%22%20fill%3D%22none%22%20stroke%3D%22url%28%23ropeShade2%29%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22round%22/%3E%20%3Ctext%20x%3D%22101%22%20y%3D%22154%22%20font-family%3D%22Georgia%2C%20%27Times%20New%20Roman%27%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23050504%22%20text-anchor%3D%22middle%22%20opacity%3D%220.75%22%3E%3F%3C/text%3E%20%3Ctext%20x%3D%22100%22%20y%3D%22153%22%20font-family%3D%22Georgia%2C%20%27Times%20New%20Roman%27%2C%20serif%22%20font-size%3D%2270%22%20font-weight%3D%22700%22%20fill%3D%22%23c9a84f%22%20text-anchor%3D%22middle%22%3E%3F%3C/text%3E%20%3Cg%20transform%3D%22translate%28100%2C183%29%22%3E%20%3Ccircle%20r%3D%2219%22%20fill%3D%22%23100e0b%22%20stroke%3D%22%238c7a4a%22%20stroke-width%3D%221.3%22%20stroke-dasharray%3D%222.3%202.1%22%20opacity%3D%220.9%22/%3E%20%3Cg%20transform%3D%22scale%280.68%29%22%3E%20%3Cpath%20d%3D%22M%20-17%200%20A%2017%2017%200%200%201%2017%200%20Z%22%20fill%3D%22%238a2e28%22/%3E%20%3Cpath%20d%3D%22M%20-17%200%20A%2017%2017%200%200%200%2017%200%20Z%22%20fill%3D%22%23d8d2c2%22/%3E%20%3Crect%20x%3D%22-17%22%20y%3D%22-2%22%20width%3D%2234%22%20height%3D%224%22%20fill%3D%22%23111%22/%3E%20%3Ccircle%20r%3D%225.4%22%20fill%3D%22%23d8d2c2%22%20stroke%3D%22%23111%22%20stroke-width%3D%222%22/%3E%20%3Ccircle%20r%3D%222.2%22%20fill%3D%22%23100e0b%22/%3E%20%3C/g%3E%20%3C/g%3E%20%3C/svg%3E";
+
+  const listings = {
+    singelkort: {
+      title: 'Singelkort',
+      items: []
+    },
+    booster: {
+      title: 'Boosterbokser',
+      items: [
+        { id: 'bb-1', name: 'Surging Sparks Booster Boks', price: 3599, image: 'https://product-images.tcgplayer.com/565606.jpg', stock: 2 },
+        { id: 'bb-2', name: 'Super Electric Breaker JPN Booster Boks', price: 2399, image: 'https://product-images.tcgplayer.com/587728.jpg', stock: 1 }
+      ]
+    },
+    etb: {
+      title: 'Elite Trainer Bokser',
+      items: [
+        { id: 'etb-1', name: 'Darkness Ablaze ETB', price: 1799, image: 'https://product-images.tcgplayer.com/216856.jpg', stock: 4 },
+        { id: 'etb-2', name: 'Twilight Masquerade ETB', price: 1599, image: 'https://product-images.tcgplayer.com/543845.jpg', stock: 2 },
+        { id: 'etb-3', name: 'Pitch Black ETB', price: 1199, image: 'https://product-images.tcgplayer.com/692947.jpg', stock: 2 },
+        { id: 'etb-4', name: 'Black Bolt ETB', price: 1799, image: 'https://product-images.tcgplayer.com/630686.jpg', stock: 1 },
+        { id: 'etb-5', name: 'White Flare ETB', price: 1799, image: 'https://product-images.tcgplayer.com/630689.jpg', stock: 1 },
+        { id: 'etb-6', name: 'Perfect Order ETB', price: 1100, image: 'https://product-images.tcgplayer.com/672401.jpg', stock: 1 },
+        { id: 'etb-7', name: 'Destined Rivals ETB', price: 1799, image: 'https://product-images.tcgplayer.com/624676.jpg', stock: 1 },
+        { id: 'etb-8', name: 'Mega Evolution (Gardevoir) ETB', price: 1799, image: 'https://product-images.tcgplayer.com/644279.jpg', stock: 1 },
+        { id: 'etb-9', name: 'Stellar Crown ETB', price: 1699, image: 'https://product-images.tcgplayer.com/557350.jpg', stock: 1 }
+      ]
+    },
+    graded: {
+      title: 'Graderte kort',
+      items: []
+    },
+    mystery: {
+      title: 'Mystery Packs',
+      items: [
+        { id: 'mp-1', name: 'Mystery Pack — Basic', price: 125, image: MYSTERY_BAG_IMG, transparent: true, comingSoon: true },
+        { id: 'mp-2', name: 'Mystery Pack — Sjelden garantert', price: 299, image: MYSTERY_BAG_IMG, transparent: true, comingSoon: true },
+        { id: 'mp-3', name: 'Mystery Pack — Premium (hit garantert)', price: 549, image: MYSTERY_BAG_IMG, transparent: true, comingSoon: true }
+      ]
+    },
+    collection: {
+      title: 'Collection Bokser',
+      items: [
+        { id: 'cb-1', name: 'Greninja ex Special Illustration Collection (Shrouded Fable)', price: 2199, image: 'https://product-images.tcgplayer.com/553002.jpg', stock: 1 },
+        { id: 'cb-2', name: 'Reshiram Ex Collection Boks', price: 799, image: 'https://product-images.tcgplayer.com/666512.jpg', stock: 1 },
+        { id: 'cb-3', name: 'Mega Charizard X Ultra Premium Collection Boks', price: 2700, image: 'https://product-images.tcgplayer.com/654213.jpg', stock: 1 }
+      ]
+    },
+    onepiece: {
+      title: 'One Piece',
+      items: [
+        { id: 'op-1', name: 'OP-17 JPN Booster Boks', price: 1800, image: 'https://card-binder.com/cdn/shop/files/One-Piece-OP17-The-Worlds-Strongest-Warriors-Japanese-Booster-Box.webp?v=1784631445', stock: 6, preorder: true },
+        { id: 'op-2', name: 'OP-10 JPN Booster Boks', price: 1100, image: 'https://card-binder.com/cdn/shop/files/One-Piece-OP10-Royal-Blood-Japanese-Booster-Pack.webp?v=1759692945&width=1500', stock: 3 }
+      ]
+    }
+  };
+
+  const shopGrid = document.getElementById('shopGrid');
+  const listingView = document.getElementById('listingView');
+  const listingTitle = document.getElementById('listingTitle');
+  const listingGrid = document.getElementById('listingGrid');
+
+  function fmtKr(n) {
+    return n.toLocaleString('nb-NO') + ' kr';
+  }
+
+  // Renders the "X på lager" line under a product's price. Products with no
+  // `stock` field set yet show nothing (rather than a made-up number) — fill
+  // in `stock: <antall>` per vare i `const listings` når du har reelt antall.
+  function stockLabel(stock) {
+    if (stock === undefined || stock === null) return '';
+    if (stock === 0) return `<div class="listing-stock out">Utsolgt</div>`;
+    if (stock <= 3) return `<div class="listing-stock low">Kun ${stock} igjen på lager</div>`;
+    return `<div class="listing-stock">${stock} stk. på lager</div>`;
+  }
+
+  function findItem(id) {
+    for (const key in listings) {
+      const found = listings[key].items.find(i => i.id === id);
+      if (found) return found;
+    }
+    return null;
+  }
+
+  // Works out what to show for a product's status line and add-to-cart
+  // button: a "Kommer snart" item is fully disabled (item.comingSoon), an
+  // "Utsolgt" item (stock: 0) is disabled, a "Forhåndsbestill" item
+  // (item.preorder) is buyable but labelled as a pre-order, and everything
+  // else falls back to the normal stock label.
+  function itemStatus(item) {
+    if (item.comingSoon) {
+      return { statusHtml: '<div class="listing-stock">Kommer snart</div>', label: 'Kommer snart', disabled: true };
+    }
+    if (item.stock === 0) {
+      return { statusHtml: stockLabel(item.stock), label: 'Utsolgt', disabled: true };
+    }
+    if (item.preorder) {
+      return { statusHtml: '<div class="listing-stock preorder">Forhåndsbestilling</div>', label: 'Forhåndsbestill', disabled: false };
+    }
+    return { statusHtml: stockLabel(item.stock), label: 'Legg i handlekurv', disabled: false };
+  }
+
+  function showListing(key) {
+    const data = listings[key];
+    if (!data) return;
+    listingTitle.textContent = data.title;
+    listingGrid.innerHTML = data.items.length ? data.items.map(item => {
+      const s = itemStatus(item);
+      return `
+      <div class="listing-card">
+        <div class="listing-image${item.transparent ? ' transparent' : ''}">
+          ${item.image ? `<img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','&lt;span&gt;🖼️&lt;/span&gt;')">` : '<span>🖼️</span>'}
+        </div>
+        <div class="listing-body">
+          <h4>${item.name}</h4>
+          <div class="listing-price">${fmtKr(item.price)}</div>
+          ${s.statusHtml}
+          <button class="add-cart-btn" onclick="addToCart('${item.id}', this)"${s.disabled ? ' disabled' : ''}>${s.label}</button>
+        </div>
+      </div>
+    `;
+    }).join('') : `<p class="empty-listing">Ingen produkter tilgjengelig i denne kategorien akkurat nå — sjekk tilbake senere!</p>`;
+    shopGrid.style.display = 'none';
+    listingView.classList.add('open');
+    listingView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function hideListing() {
+    listingView.classList.remove('open');
+    shopGrid.style.display = 'grid';
+    shopGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* ---------- Cart ----------
+     In-memory only (resets on page reload). Swap in localStorage once this
+     is hosted live, if you want the cart to survive a refresh. */
+  const cart = {}; // id -> { id, name, price, qty }
+
+  const cartBtn = document.getElementById('cartBtn');
+  const cartBadge = document.getElementById('cartBadge');
+  const cartOverlay = document.getElementById('cartOverlay');
+  const cartDrawer = document.getElementById('cartDrawer');
+  const cartItemsEl = document.getElementById('cartItems');
+  const cartSubtotalEl = document.getElementById('cartSubtotal');
+  const checkoutBtn = document.getElementById('checkoutBtn');
+
+  function cartCount() {
+    return Object.values(cart).reduce((sum, i) => sum + i.qty, 0);
+  }
+  function cartTotal() {
+    return Object.values(cart).reduce((sum, i) => sum + i.qty * i.price, 0);
+  }
+
+  function addToCart(id, btnEl) {
+    const item = findItem(id);
+    if (!item) return;
+    const currentQty = cart[id] ? cart[id].qty : 0;
+    if (typeof item.stock === 'number' && currentQty >= item.stock) return; // can't exceed stock
+    if (cart[id]) {
+      cart[id].qty += 1;
+    } else {
+      cart[id] = { id: item.id, name: item.name, price: item.price, qty: 1, stock: item.stock };
+    }
+    renderCart();
+    if (btnEl) {
+      const original = btnEl.textContent;
+      btnEl.textContent = 'Lagt til ✓';
+      btnEl.classList.add('added');
+      setTimeout(() => {
+        btnEl.textContent = original;
+        btnEl.classList.remove('added');
+      }, 1000);
+    }
+  }
+
+  function changeQty(id, delta) {
+    if (!cart[id]) return;
+    if (delta > 0 && typeof cart[id].stock === 'number' && cart[id].qty >= cart[id].stock) return; // can't exceed stock
+    cart[id].qty += delta;
+    if (cart[id].qty <= 0) delete cart[id];
+    renderCart();
+  }
+
+  function removeFromCart(id) {
+    delete cart[id];
+    renderCart();
+  }
+
+  function renderCart() {
+    const items = Object.values(cart);
+    const count = cartCount();
+    cartBadge.textContent = count;
+    cartBadge.classList.toggle('hidden', count === 0);
+    checkoutBtn.disabled = count === 0;
+
+    if (items.length === 0) {
+      cartItemsEl.innerHTML = '<div class="cart-empty">Handlekurven din er tom.</div>';
+    } else {
+      cartItemsEl.innerHTML = items.map(i => `
+        <div class="cart-item">
+          <div class="cart-item-icon">🃏</div>
+          <div class="cart-item-info">
+            <h4>${i.name}</h4>
+            <div class="cart-item-price">${fmtKr(i.price)}</div>
+            <div class="qty-controls">
+              <button onclick="changeQty('${i.id}', -1)" aria-label="Færre">−</button>
+              <span>${i.qty}</span>
+              <button onclick="changeQty('${i.id}', 1)" aria-label="Flere">+</button>
+              <button class="cart-item-remove" onclick="removeFromCart('${i.id}')">Fjern</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+    cartSubtotalEl.textContent = fmtKr(cartTotal());
+    renderCheckoutSummary();
+  }
+
+  function openCart() {
+    cartOverlay.classList.add('open');
+    cartDrawer.classList.add('open');
+  }
+  function closeCart() {
+    cartOverlay.classList.remove('open');
+    cartDrawer.classList.remove('open');
+  }
+
+  /* ---------- Checkout ---------- */
+  const checkoutOverlay = document.getElementById('checkoutOverlay');
+  const checkoutSummary = document.getElementById('checkoutSummary');
+  const checkoutForm = document.getElementById('checkoutForm');
+  const checkoutStatus = document.getElementById('checkoutStatus');
+  const vippsBtn = document.getElementById('vippsBtn');
+
+  function renderCheckoutSummary() {
+    const items = Object.values(cart);
+    if (items.length === 0) {
+      checkoutSummary.innerHTML = '<div class="checkout-summary-row"><span>Handlekurven er tom</span></div>';
+      return;
+    }
+    checkoutSummary.innerHTML =
+      items.map(i => `
+        <div class="checkout-summary-row">
+          <span>${i.qty} × ${i.name}</span>
+          <span>${fmtKr(i.qty * i.price)}</span>
+        </div>
+      `).join('') +
+      `<div class="checkout-summary-total"><span>Totalt</span><span>${fmtKr(cartTotal())}</span></div>`;
+  }
+
+  function openCheckout() {
+    if (cartCount() === 0) return;
+    closeCart();
+    checkoutStatus.classList.remove('show', 'info', 'error');
+    renderCheckoutSummary();
+    checkoutOverlay.classList.add('open');
+  }
+  function closeCheckout() {
+    checkoutOverlay.classList.remove('open');
+    openCart();
+  }
+
+  function showCheckoutStatus(message, type) {
+    checkoutStatus.textContent = message;
+    checkoutStatus.className = 'checkout-status show ' + type;
+  }
+
+  checkoutForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (cartCount() === 0) return;
+
+    const order = {
+      customer: {
+        firstName: document.getElementById('ckFornavn').value.trim(),
+        lastName: document.getElementById('ckEtternavn').value.trim(),
+        address: {
+          street: document.getElementById('ckAdresse').value.trim(),
+          postalCode: document.getElementById('ckPostnummer').value.trim(),
+          city: document.getElementById('ckPoststed').value.trim()
+        },
+        email: document.getElementById('ckEpost').value.trim(),
+        phone: document.getElementById('ckTelefon').value.trim().replace(/[\s+]/g, ''),
+        note: document.getElementById('ckMerknad').value.trim()
+      },
+      items: Object.values(cart),
+      total: cartTotal()
+    };
+
+    vippsBtn.disabled = true;
+    vippsBtn.textContent = 'Kobler til Vipps …';
+
+    // Send the order confirmation e-post in parallel with starting the Vipps
+    // payment — this is the closest we have to a "kjøpsbekreftelse" trigger
+    // until a real order database + webhook-based confirmation is wired up
+    // (see README.md "Om e-postbekreftelse"). Fails silently (logged only) if
+    // RESEND_API_KEY isn't set yet, so it never blocks checkout.
+    fetch('/api/send-order-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(order)
+    }).catch((err) => console.warn('send-order-email failed:', err));
+
+    try {
+      const res = await fetch('/api/vipps/initiate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(order)
+      });
+      if (!res.ok) throw new Error('bad-response');
+      const data = await res.json();
+      if (!data.redirectUrl) throw new Error('no-redirect');
+      // Off to Vipps — cart stays as-is in case the visitor comes back.
+      window.location.href = data.redirectUrl;
+    } catch (err) {
+      // No live payment backend deployed yet (or it failed) — degrade gracefully
+      // instead of leaving the visitor stuck. See README.md for deploying the
+      // real Vipps backend in /api/vipps.
+      showCheckoutStatus(
+        'Vipps-betaling er ikke satt opp på nettsiden ennå. Bestillingen din er notert her — ' +
+        'bruk kontaktskjemaet nederst på siden for å fullføre kjøpet, så bekrefter vi sammen.',
+        'info'
+      );
+      vippsBtn.disabled = false;
+      vippsBtn.textContent = 'Betal med Vipps';
+    }
+  });
+
+  // Initial render
+  renderCart();
+</script>
+
+</body>
+</html>
