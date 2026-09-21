@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Betaling — LIEN TCG</title>
+<style>
+  :root { --bg:#000; --panel:#141414; --panel-border:#2e2e2e; --gold:#d4af37; --text:#fff; --text-dim:#b8b8b8; --success:#4caf6e; --danger:#e05555; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px;
+  }
+  .box {
+    background: var(--panel); border: 1px solid var(--panel-border); border-radius: 18px;
+    padding: 48px; max-width: 480px; width: 100%; text-align: center;
+  }
+  .icon { font-size: 3rem; margin-bottom: 16px; }
+  h1 { font-size: 1.4rem; margin-bottom: 12px; }
+  p { color: var(--text-dim); margin-bottom: 24px; line-height: 1.6; }
+  a.btn {
+    display: inline-block; background: var(--gold); color: #000; text-decoration: none;
+    padding: 14px 28px; border-radius: 10px; font-weight: 700;
+  }
+  .state-ok .icon, .state-ok h1 { color: var(--success); }
+  .state-fail .icon, .state-fail h1 { color: var(--danger); }
+</style>
+</head>
+<body>
+  <div class="box" id="box">
+    <div class="icon">⏳</div>
+    <h1>Sjekker betalingen …</h1>
+    <p>Vent litt mens vi bekrefter status hos Vipps.</p>
+  </div>
+
+  <script>
+    const box = document.getElementById('box');
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+
+    async function checkStatus() {
+      if (!ref) {
+        render('fail', '❓', 'Fant ingen bestillingsreferanse', 'Ta kontakt med oss hvis du er usikker på om betalingen din gikk gjennom.');
+        return;
+      }
+      try {
+        const res = await fetch('/api/vipps/status?ref=' + encodeURIComponent(ref));
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Ukjent feil');
+
+        if (data.state === 'AUTHORIZED') {
+          render('ok', '✅', 'Takk for din bestilling!', 'Betalingen er bekreftet. Vi tar kontakt med deg om leveranse eller henting.');
+        } else if (data.state === 'CREATED') {
+          render('fail', '⏳', 'Betalingen er ikke fullført', 'Det ser ut som betalingen ble avbrutt underveis. Ingenting er trukket. Prøv gjerne igjen, eller ta kontakt med oss.');
+        } else {
+          render('fail', '❌', 'Betalingen gikk ikke gjennom', 'Status: ' + data.state + '. Ta kontakt med oss hvis du trenger hjelp.');
+        }
+      } catch (err) {
+        render('fail', '⚠️', 'Kunne ikke bekrefte status', 'Ta kontakt med oss med referansen ' + ref + ', så sjekker vi manuelt.');
+      }
+    }
+
+    function render(state, icon, title, text) {
+      box.className = 'state-' + state;
+      box.innerHTML = `
+        <div class="icon">${icon}</div>
+        <h1>${title}</h1>
+        <p>${text}</p>
+        <a class="btn" href="/">Tilbake til butikken</a>
+      `;
+    }
+
+    checkStatus();
+  </script>
+</body>
+</html>

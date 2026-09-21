@@ -1,0 +1,9 @@
+{
+  "name": "lien-tcg",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LIEN TCG — nettbutikk med Vipps-betaling",
+  "engines": {
+    "node": ">=18"
+  }
+}
